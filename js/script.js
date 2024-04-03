@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     input.value = '';
     input.focus();
     const playButton = document.getElementById('play');
+    const numberDisplay = document.getElementById('number');
     // TODO: Implement keyboard and touchend events too
     playButton.addEventListener('click', () => {
         console.log("click!");
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     // disable input
                     console.log("WIN!");
                     playButton.disabled = true;
+                    numberDisplay.innerHTML = numberToGuess;
                 } else if (guess > numberToGuess) {
                     points--;
                     input.focus();
@@ -37,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 // TODO: Add error message
                 console.log("error: wrong value. Must be between 1 and 20");
-                playButton.disabled = true;
                 input.focus();
             }
         }
@@ -53,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         playButton.disabled = false;
         input.focus();
+        numberDisplay.innerHTML = '?';
     });
 });
 
