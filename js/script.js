@@ -66,24 +66,17 @@ document.addEventListener("DOMContentLoaded", () => {
             points--;
             pointsDisplay.innerHTML = points;
             input.focus();
-            let message = 'number is lower';
+            let message = '';
 
             if (guess < numberToGuess) {
                 message = 'number is higher';
             }
 
-            // if (guess > numberToGuess) {
-            //     // TODO: display message that number is lower
-            //     // TODO: display points
-            //     console.log("number is lower");
-            // } else if (guess < numberToGuess) {
-            //     // TODO: Display msg that number is higher
-            //     // TODO: display points
-            //     console.log('number is higher');
-            // }
+            if (guess > numberToGuess) {
+                message = 'number is lower';
+            }
 
-            // TODO: get message to display
-
+            console.log(message);
             return;
         }
 
