@@ -7,30 +7,32 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="flex flex_center">
-        <h1>Adivinha o número</h1>
+    <div class="container">
+        <div class="flex flex_center">
+            <h1>Adivinha o número</h1>
+        </div>
+        <div class="flex flex_center">
+            <div id="number">?</div>
+        </div>
+        <div id="input-wrap" class="flex flex_center">
+            <input
+                type="text"
+                name="guess"
+                id="guess"
+            >
+        </div>
+        <div class="flex flex_center">
+            <button id="play">Adivinhar</button>
+            <button id="reset">Novo Jogo</button>
+        </div>
+        <div class="flex flex_center">
+            <div id="instructions">Adivinha um número entre 1 e 20</div>
+        </div>
+        <div class="flex flex_center">
+            <div>Pontos: <span id="points"></span></div>
+        </div>
     </div>
-    <div class="flex flex_center">
-        <div id="number">?</div>
-    </div>
-    <div id="input-wrap" class="flex flex_center">
-        <input
-            type="text"
-            name="guess"
-            id="guess"
-        >
-    </div>
-    <div class="flex flex_center">
-        <button id="play">Adivinhar</button>
-        <button id="reset">Novo Jogo</button>
-    </div>
-    <div class="flex flex_center">
-        <div id="instructions">Adivinha um número entre 1 e 20</div>
-    </div>
-    <div class="flex flex_center">
-        <div>Pontos: <span id="points"></span></div>
-    </div>
-    
+
     <script src="js/script.js"></script>
 </body>
 </html>

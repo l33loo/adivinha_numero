@@ -7,6 +7,27 @@ body, button {
   font-family: "Russo One", sans-serif;
 }
 
+#number {
+  background-color: yellow;
+  padding: 40px;
+  line-height: 3rem;
+  border-radius: 20px;
+  font-size: 5rem;
+  color: white;
+}
+
+.container {
+  padding: 20px;
+}
+
+.flex {
+  display: flex;
+}
+.flex_center {
+  justify-content: center;
+  align-items: center;
+}
+
 .flex {
   display: flex;
 }
