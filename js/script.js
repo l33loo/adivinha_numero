@@ -96,13 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
         inputWrapper.appendChild(messageDiv);
     }
 
-    function clearMessage() {
-        const message = document.getElementById('message')
-        if (!!message) {
-            message.remove();
-        }
-    }
-
     function resetGame(e) {
         e.preventDefault();
         clearMessage();
@@ -116,6 +109,13 @@ document.addEventListener("DOMContentLoaded", () => {
         input.focus();
         playButton.disabled = false;
         numberDisplay.innerHTML = '?';
+    }
+
+    function clearMessage() {
+        const message = document.getElementById('message')
+        if (!!message) {
+            message.remove();
+        }
     }
 });
 
