@@ -13,13 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     playButton.addEventListener('click', (e) => play(e));
     playButton.addEventListener('touchend', (e) => play(e));
-    playButton.addEventListener('keydown', (e) => {
+    playButton.addEventListener('keyup', (e) => {
         if (e.key === 'Enter') {
             play(e);
         }
     });
     input.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
+        if (!e.currentTarget.disabled && e.key === 'Enter') {
             play(e);
         }
     });
@@ -36,13 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         console.log("click!");
         const guess = input.value;
-
-        // Game over
-        // TODO: continues once more when hitting 0 - to fix
-        if (points <= 0) {
-            endGame(false);
-            return;
-        }
         
         // Win
         // Usamos o '==' porque o palpite é uma string
@@ -64,6 +57,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (guess > numberToGuess) {
                 message = 'number is lower';
+            }
+
+            // Game over
+            if (points === 0) {
+                endGame(false);
             }
 
             console.log(message);
