@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Russo One";
+  src: url("../fonts/RussoOne-Regular.woff");
+  src: url("../fonts/RussoOne-Regular.woff") format("woff"), url("../fonts/RussoOne-Regular.woff2") format("woff2");
+}
+body, button {
+  font-family: "Russo One", sans-serif;
+}/*# sourceMappingURL=style.css.map */
