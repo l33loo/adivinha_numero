@@ -1,13 +1,17 @@
 @use '../base' as *;
 
-input {
-    width: 100%;
-    max-width: 500px;
-    background-color: $secondary;
-    border: 3px solid $tercery;
-    border-radius: 20px;
-    padding: 20px;
-    color: $primary;
-    font-family: "Russo One", sans-serif;
-    font-size: 1.5rem;
+#input-wrap {
+    padding-top: 3rem;
+
+    input {
+        width: 100%;
+        max-width: 540px;
+        background-color: $secondary;
+        border: 3px solid $tercery;
+        border-radius: 20px;
+        padding: 20px;
+        color: $primary;
+        font-family: "Russo One", sans-serif;
+        font-size: 1.5rem;
+    }
 }

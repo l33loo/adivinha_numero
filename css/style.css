@@ -339,6 +339,7 @@ template {
   padding: 24px 40px;
   font-size: 1.4rem;
   border-radius: 15px;
+  margin: 32px 18px;
 }
 .btn_primary {
   background-color: #00c7f7;
@@ -347,9 +348,12 @@ template {
   background-color: #82569e;
 }
 
-input {
+#input-wrap {
+  padding-top: 3rem;
+}
+#input-wrap input {
   width: 100%;
-  max-width: 500px;
+  max-width: 540px;
   background-color: #3e295b;
   border: 3px solid #82569e;
   border-radius: 20px;
