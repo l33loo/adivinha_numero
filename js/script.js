@@ -12,7 +12,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const numberDisplay = document.getElementById('number');
     const pointsDisplay = document.getElementById('points');
     // TODO: Implement keyboard and touchend events too
-    playButton.addEventListener('click', () => {
+    playButton.addEventListener('click', play);
+    playButton.addEventListener('touchend', play);
+    playButton.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            play();
+        }
+    });
+
+    resetButton.addEventListener('click', resetGame);
+    resetButton.addEventListener('touchend', resetGame);
+    resetButton.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            resetGame();
+        }
+    });
+
+    const play = () => {
         console.log("click!");
         const guess = input.value;
 
@@ -63,19 +79,20 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("error: wrong value. Must be between 1 and 20");
             input.focus();
         }
-    });
+    };
 
-    resetButton.addEventListener('click', () => {
+    const resetGame = () => {
         points = 20;
+        pointsDisplay.innerHTML = points;
         numberToGuess = generateNumberToGuess();
         console.log(numberToGuess);
-
+    
         input.value = '';
         input.disabled = false;
         input.focus();
         playButton.disabled = false;
         numberDisplay.innerHTML = '?';
-    });
+    };
 });
 
 const generateNumberToGuess = () => {
