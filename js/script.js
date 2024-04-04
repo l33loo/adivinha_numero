@@ -38,25 +38,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const guess = input.value;
 
         // Game over
+        // TODO: continues once more when hitting 0 - to fix
         if (points <= 0) {
-            // TODO: msg that player lost the game
-            // TODO: disable play button
-            console.log("game over :(");
+            endGame(false);
             return;
         }
         
         // Win
         // Usamos o '==' porque o palpite é uma string
         if (guess == numberToGuess) {
-            console.log(typeof guess);
-            // TODO: win!
-            // TODO: disable input
-            console.log("WIN!");
-            playButton.disabled = true;
-            input.disabled = true;
-            numberDisplay.innerHTML = numberToGuess;
-            resetButton.focus();
-
+            endGame(true);
             return;
         }
         
@@ -83,6 +74,23 @@ document.addEventListener("DOMContentLoaded", () => {
         // TODO: Add error message
         console.log("error: wrong value. Must be between 1 and 20");
         input.focus();
+    }
+
+    function endGame(isWin) {
+        // TODO: get msg to display
+        let message = '';
+        if (isWin) {
+            message = 'WIN!';
+        }
+        if (!isWin) {
+            message = 'game over :(';
+        }
+     
+        console.log(message);
+        playButton.disabled = true;
+        input.disabled = true;
+        numberDisplay.innerHTML = numberToGuess;
+        resetButton.focus();
     }
 
     function resetGame(e) {
