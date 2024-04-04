@@ -339,7 +339,10 @@ template {
   padding: 24px 40px;
   font-size: 1.4rem;
   border-radius: 15px;
-  margin: 2rem 1.1rem;
+  margin: 2rem 0;
+}
+.btn:nth-child(2) {
+  margin-left: 2.2rem;
 }
 .btn_primary {
   background-color: #00c7f7;
