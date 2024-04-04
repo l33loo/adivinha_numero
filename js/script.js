@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const playButton = document.getElementById('play');
     const resetButton = document.getElementById('reset');
     const numberDisplay = document.getElementById('number');
+    const inputWrapper = document.getElementById('input-wrap');
 
     playButton.addEventListener('click', (e) => play(e));
     playButton.addEventListener('touchend', (e) => play(e));
@@ -35,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function play(e) {
         e.preventDefault();
+        clearMessage();
         console.log("click!");
         const guess = input.value;
         
@@ -50,15 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
             points--;
             pointsDisplay.innerHTML = points;
             input.focus();
-            let message = '';
-
-            if (guess < numberToGuess) {
-                message = 'number is higher';
-            }
-
-            if (guess > numberToGuess) {
-                message = 'number is lower';
-            }
+            const message = (guess < numberToGuess) ? 'number is higher': 'number is lower';
+            displayMessage(message, 'wrong');
 
             // Game over
             if (points === 0) {
@@ -76,14 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function endGame(isWin) {
-        // TODO: get msg to display
-        let message = '';
-        if (isWin) {
-            message = 'WIN!';
-        }
-        if (!isWin) {
-            message = 'game over :(';
-        }
+        const className = isWin ? 'won' : 'lost';
+        const message = isWin ? 'WIN!' : 'game over :(';
+        displayMessage(message, className);
      
         console.log(message);
         playButton.disabled = true;
@@ -92,8 +82,31 @@ document.addEventListener("DOMContentLoaded", () => {
         resetButton.focus();
     }
 
+    function displayMessage(message, className) {
+        const existingMessage = document.getElementById('message');
+        if (!!document.getElementById('message')) {
+            existingMessage.className = className;
+            existingMessage.innerHTML = message;
+            return;
+        }
+
+        const messageDiv = document.createElement('div');
+        messageDiv.setAttribute('id', 'message');
+        messageDiv.className = className;
+        messageDiv.innerHTML = message;
+        inputWrapper.appendChild(messageDiv);
+    }
+
+    function clearMessage() {
+        const message = document.getElementById('message')
+        if (!!message) {
+            message.remove();
+        }
+    }
+
     function resetGame(e) {
         e.preventDefault();
+        clearMessage();
         points = 20;
         pointsDisplay.innerHTML = points;
         numberToGuess = generateNumberToGuess();
