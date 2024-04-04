@@ -1,5 +1,7 @@
+@use '../base/colors' as *;
+
 #number {
-    background-color: yellow;
+    background-color: $yellow;
     padding: 40px;
     line-height: 3rem;
     border-radius: 20px;

@@ -6,15 +6,16 @@
     <title>Adivinha o número!</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="flex flex_center">
+    <!-- <img src="../UI-Design-AdivinhaNum.png" alt=""> -->
     <div class="container">
         <div class="flex flex_center">
             <h1>Adivinha o número</h1>
         </div>
         <div class="flex flex_center">
-            <div id="number">?</div>
+            <div id="number" class="flex flex_center">?</div>
         </div>
-        <div id="input-wrap" class="flex flex_center">
+        <div id="input-wrap" class="flex flex_center flex_column">
             <input
                 type="text"
                 name="guess"
@@ -29,7 +30,7 @@
             <div id="instructions">Adivinha um número entre 1 e 20</div>
         </div>
         <div class="flex flex_center">
-            <div>Pontos: <span id="points"></span></div>
+            <div class="points">Pontos: <span id="points"></span></div>
         </div>
     </div>
 

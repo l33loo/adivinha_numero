@@ -1,0 +1,18 @@
+@use '../base/colors' as *;
+
+button {
+    color: $primary;
+    border: none;
+    margin: 0;
+    padding: 20px 40px;
+    font-size: 1.4rem;
+    border-radius: 15px;
+}
+
+#play {
+    background-color: $playBtn;
+}
+
+#reset {
+    background-color: $tercery;
+}

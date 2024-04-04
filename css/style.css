@@ -2,6 +2,11 @@ body {
   background-image: url("../img/fundo.png");
   background-size: contain;
   background-repeat: repeat-x;
+  color: #fff;
+}
+
+.points {
+  color: #ece2bf;
 }
 
 @font-face {
@@ -13,8 +18,49 @@ body, button {
   font-family: "Russo One", sans-serif;
 }
 
+h1 {
+  font-size: 4rem;
+}
+
+button {
+  border: none;
+}
+
+button {
+  color: #fff;
+  border: none;
+  margin: 0;
+  padding: 20px 40px;
+  font-size: 1.4rem;
+  border-radius: 15px;
+}
+
+#play {
+  background-color: #00c7f7;
+}
+
+#reset {
+  background-color: #82569e;
+}
+
+input {
+  width: 100%;
+  max-width: 500px;
+  background-color: #3e295b;
+  border: 3px solid #82569e;
+  border-radius: 20px;
+  padding: 20px;
+  color: #fff;
+  font-family: "Russo One", sans-serif;
+  font-size: 1.5rem;
+}
+
+#message {
+  flex-grow: 1;
+}
+
 #number {
-  background-color: yellow;
+  background-color: #ebcb5b;
   padding: 40px;
   line-height: 3rem;
   border-radius: 20px;
@@ -39,6 +85,9 @@ body {
 .flex_center {
   justify-content: center;
   align-items: center;
+}
+.flex_column {
+  flex-direction: column;
 }
 
 .flex {
