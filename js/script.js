@@ -3,13 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let numberToGuess = generateNumberToGuess();
     console.log(numberToGuess);
 
+    const pointsDisplay = document.getElementById('points');
+    pointsDisplay.innerHTML = points;
     const input = document.getElementById('guess');
     input.value = '';
     input.focus();
     const playButton = document.getElementById('play');
     const resetButton = document.getElementById('reset');
     const numberDisplay = document.getElementById('number');
-    const pointsDisplay = document.getElementById('points');
 
     playButton.addEventListener('click', (e) => play(e));
     playButton.addEventListener('touchend', (e) => play(e));
