@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const resetButton = document.getElementById('reset');
     const numberDisplay = document.getElementById('number');
     const inputWrapper = document.getElementById('input-wrap');
+    const messageElement = document.getElementById('message');
+    resetMessage();
 
     playButton.addEventListener('click', (e) => play(e));
     playButton.addEventListener('touchend', (e) => play(e));
@@ -36,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function play(e) {
         e.preventDefault();
-        clearMessage();
+        resetMessage();
         console.log("click!");
         const guess = input.value;
         
@@ -81,24 +83,9 @@ document.addEventListener("DOMContentLoaded", () => {
         resetButton.focus();
     }
 
-    function displayMessage(message, className) {
-        const existingMessage = document.getElementById('message');
-        if (!!document.getElementById('message')) {
-            existingMessage.className = className;
-            existingMessage.innerHTML = message;
-            return;
-        }
-
-        const messageDiv = document.createElement('div');
-        messageDiv.setAttribute('id', 'message');
-        messageDiv.className = className;
-        messageDiv.innerHTML = message;
-        inputWrapper.appendChild(messageDiv);
-    }
-
     function resetGame(e) {
         e.preventDefault();
-        clearMessage();
+        resetMessage();
         points = 20;
         pointsDisplay.innerHTML = points;
         numberToGuess = generateNumberToGuess();
@@ -111,11 +98,13 @@ document.addEventListener("DOMContentLoaded", () => {
         numberDisplay.innerHTML = '?';
     }
 
-    function clearMessage() {
-        const message = document.getElementById('message')
-        if (!!message) {
-            message.remove();
-        }
+    function resetMessage() {
+        displayMessage('Adivinha um número entre 1 e 20', 'instructions');
+    }
+
+    function displayMessage(message, className) {
+        messageElement.innerHTML = message;
+        messageElement.className = className;
     }
 });
 
