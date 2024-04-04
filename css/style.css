@@ -339,7 +339,7 @@ template {
   padding: 24px 40px;
   font-size: 1.4rem;
   border-radius: 15px;
-  margin: 32px 18px;
+  margin: 2rem 1.1rem;
 }
 .btn_primary {
   background-color: #00c7f7;
@@ -349,7 +349,7 @@ template {
 }
 
 #input-wrap {
-  padding-top: 3rem;
+  padding-top: 3.2rem;
 }
 #input-wrap input {
   width: 100%;
@@ -365,6 +365,7 @@ template {
 
 #message {
   font-size: 1.4rem;
+  padding: 2rem 0;
 }
 
 #number {
@@ -378,11 +379,12 @@ template {
 
 .points {
   font-size: 2.2rem;
+  padding-bottom: 1rem;
 }
 
 body {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
 }
