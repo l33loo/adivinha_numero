@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // TODO: display points
     let points = 20;
     let numberToGuess = generateNumberToGuess();
     console.log(numberToGuess);
