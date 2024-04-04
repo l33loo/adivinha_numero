@@ -65,8 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         // Invalid guess
-        // TODO: Add error message
-        console.log("error: wrong value. Must be between 1 and 20");
+        displayMessage("error: wrong value. Must be between 1 and 20", 'invalid');
         input.focus();
     }
 
