@@ -5,4 +5,12 @@
 }
 body, button {
   font-family: "Russo One", sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+.flex_center {
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
