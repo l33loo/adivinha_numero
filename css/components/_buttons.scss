@@ -1,18 +1,18 @@
 @use '../base/colors' as *;
 
-button {
+.btn {
     color: $primary;
     border: none;
     margin: 0;
     padding: 24px 40px;
     font-size: 1.4rem;
     border-radius: 15px;
-}
 
-#play {
-    background-color: $playBtn;
-}
+    &_primary {
+        background-color: $playBtn;
+    }
 
-#reset {
-    background-color: $tercery;
+    &_secondary {
+        background-color: $tercery;
+    }
 }

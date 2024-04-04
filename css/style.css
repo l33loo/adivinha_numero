@@ -332,7 +332,7 @@ template {
   display: none;
 }
 
-button {
+.btn {
   color: #fff;
   border: none;
   margin: 0;
@@ -340,12 +340,10 @@ button {
   font-size: 1.4rem;
   border-radius: 15px;
 }
-
-#play {
+.btn_primary {
   background-color: #00c7f7;
 }
-
-#reset {
+.btn_secondary {
   background-color: #82569e;
 }
 
