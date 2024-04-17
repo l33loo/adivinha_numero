@@ -11,13 +11,14 @@ body {
 
 .flex {
     display: flex;
+    flex-wrap: wrap;
 
-    &_center {
+    &__center {
         justify-content: center;
         align-items: center;
     }
 
-    &_column {
+    &__column {
         flex-direction: column;
     }
 }

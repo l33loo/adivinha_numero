@@ -10,5 +10,10 @@ body, button {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3rem;
+    text-align: center;
+
+    @media screen and (min-width: 514px) {
+        font-size: 4rem;
+    }
 }
