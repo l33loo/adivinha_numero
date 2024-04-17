@@ -344,17 +344,6 @@ template {
   padding: 24px 40px;
   font-size: 1.4rem;
   border-radius: 15px;
-  margin-top: 2rem;
-}
-@media screen and (min-width: 461px) {
-  .btn {
-    margin: 2rem 0;
-  }
-}
-@media screen and (min-width: 461px) {
-  .btn:nth-child(2) {
-    margin-left: 2.2rem;
-  }
 }
 .btn_primary {
   background-color: #00c7f7;
@@ -426,6 +415,11 @@ body {
 }
 .flex__column {
   flex-direction: column;
+}
+
+.buttons {
+  gap: 2rem;
+  padding: 2rem 0;
 }
 
 .flex {
