@@ -1,0 +1,17 @@
+$primary: #fff;
+$secondary: #3e295b;
+$tercery: #82569e; // also reset btn
+$quaternery: #ece2bf;
+$yellow: #ebcb5b;
+$playBtn: #00c7f7;
+
+body {
+    background-image: url('../img/fundo.png');
+    background-size: contain;
+    background-repeat: repeat;
+    color: $primary;
+}
+
+.points {
+    color: $quaternery;
+}

@@ -1,0 +1,16 @@
+@use '../base/colors' as *;
+
+#number {
+    background-color: $yellow;
+    padding: 30px;
+    line-height: 2rem;
+    border-radius: 20px;
+    font-size: 4rem;
+    color: white;
+
+    @media screen and (min-width: 514px) {
+        padding: 40px;
+        line-height: 3rem;
+        font-size: 5rem;
+    }
+}

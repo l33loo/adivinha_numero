@@ -1,0 +1,25 @@
+body {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 20px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__center {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.buttons {
+    gap: 2rem;
+    padding: 2rem 0;
+}
