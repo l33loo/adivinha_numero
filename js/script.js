@@ -1,3 +1,5 @@
+"use strict";
+
 document.addEventListener("DOMContentLoaded", () => {
     let points = 20;
     let numberToGuess = generateNumberToGuess();
