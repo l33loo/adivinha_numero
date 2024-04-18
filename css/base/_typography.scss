@@ -24,9 +24,11 @@ input {
 
 h1 {
     font-size: 3rem;
+    margin: 2rem 0;
 
     @media screen and (min-width: vars.$breakpoint) {
         font-size: 4rem;
+        margin: 3rem 0;
     }
 }
 
