@@ -45,16 +45,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const guess = input.value;
         const guessToNumber = Number(guess);
 
+         // Win
+         if (guessToNumber === numberToGuess) {
+            endGame(true);
+            return;
+        }
+
         // Invalid guess
         if (!Number.isInteger(guessToNumber) || guessToNumber < 1 || guessToNumber > 20) {
             displayMessage("error: wrong value. Must be an integer between 1 and 20", 'invalid');
             input.focus();
-            return;
-        }
-        
-        // Win
-        if (guessToNumber === numberToGuess) {
-            endGame(true);
             return;
         }
         
