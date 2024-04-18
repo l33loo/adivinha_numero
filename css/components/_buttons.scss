@@ -1,5 +1,9 @@
 @use '../base/colors' as *;
 
+button {
+    cursor: pointer;
+}
+
 .btn {
     color: $primary;
     border: none;
@@ -7,13 +11,30 @@
     padding: 24px 40px;
     font-size: 1.4rem;
     border-radius: 15px;
+    transition: all 0.15s ease-in-out;
+
+    &:focus {
+        outline: thick double white;
+    }
+
+    &:active {
+        outline: none;
+    }
 
     &_primary {
         background-color: $playBtn;
+
+        &:hover {
+            background-color: darken($playBtn, 10%);
+        }
     }
 
     &_secondary {
         background-color: $tercery;
+
+        &:hover {
+            background-color: darken($tercery, 10%);
+        }
     }
 }
 // TODO: add hover and focus styles.
