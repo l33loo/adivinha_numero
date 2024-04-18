@@ -43,21 +43,27 @@ document.addEventListener("DOMContentLoaded", () => {
         resetMessage();
         console.log("click!");
         const guess = input.value;
+        const guessToNumber = Number(guess);
+
+        // Invalid guess
+        if (!Number.isInteger(guessToNumber) || guessToNumber < 1 || guessToNumber > 20) {
+            displayMessage("error: wrong value. Must be an integer between 1 and 20", 'invalid');
+            input.focus();
+            return;
+        }
         
         // Win
-        // Usamos o '==' porque o palpite é uma string
-        // TODO: fix use of floats
-        if (guess == numberToGuess) {
+        if (guessToNumber === numberToGuess) {
             endGame(true);
             return;
         }
         
         // Valid but wrong guess
-        if (guess >= 1 && guess <= 20) {
+        if (guessToNumber >= 1 && guessToNumber <= 20) {
             points--;
             pointsDisplay.innerHTML = points;
             input.focus();
-            const message = (guess < numberToGuess) ? 'number is higher': 'number is lower';
+            const message = (guessToNumber < numberToGuess) ? 'number is higher': 'number is lower';
             displayMessage(message, 'wrong');
 
             // Game over
@@ -68,10 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log(message);
             return;
         }
-
-        // Invalid guess
-        displayMessage("error: wrong value. Must be between 1 and 20", 'invalid');
-        input.focus();
     }
 
     function endGame(isWin) {
