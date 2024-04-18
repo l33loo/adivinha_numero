@@ -1,4 +1,12 @@
-.points {
-    font-size: 2.2rem;
+.points-wrap {
     padding-bottom: 4rem;
+    gap: 5px;
+
+    .points {
+        font-size: 2.2rem;
+    }
+
+    #award {
+        height: 40px;
+    }
 }
