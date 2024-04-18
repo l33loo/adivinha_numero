@@ -102,7 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
         displayMessage('Adivinha um número entre 1 e 20', 'instructions');
     }
 
-    // TODO: fix all messages
     function displayMessage(message, className) {
         messageElement.innerHTML = message;
         messageElement.className = className;
