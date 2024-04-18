@@ -1,4 +1,4 @@
-@use 'mixins' as mixins;
+@use '../abstracts/mixins' as mixins;
 
 body {
     @include mixins.flex-center;
@@ -6,6 +6,9 @@ body {
     min-height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
+    background-image: url('../img/fundo.png');
+    background-size: contain;
+    background-repeat: repeat;
 }
 
 .container {
@@ -14,9 +17,34 @@ body {
     & > div {
         @include mixins.flex-center;
     }
-}
 
-.buttons {
-    gap: 2rem;
-    padding: 2rem 0;
+    .input-wrap {
+        padding-top: 2rem;
+
+        @media screen and (min-width: 514px) {
+            padding-top: 3.2rem;
+        }
+    }
+
+    .buttons-wrap {
+        gap: 1rem;
+        padding: 2rem 0;
+
+        @media screen and (min-width: 514px) {
+            gap: 2rem;
+        }
+    }
+
+    .message-wrap {
+        padding: 0 0 2rem;
+
+        @media screen and (min-width: 514px) {
+            padding: 2rem 0;
+        }
+    }
+
+    .points-wrap {
+        padding-bottom: 4rem;
+        gap: 5px;
+    }
 }

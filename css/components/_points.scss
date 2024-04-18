@@ -1,12 +1,10 @@
-.points-wrap {
-    padding-bottom: 4rem;
-    gap: 5px;
+@use '../abstracts/variables' as vars;
 
-    .points {
-        font-size: 2.2rem;
-    }
+.points {
+    color: vars.$quaternery;
+    font-size: 2.2rem;
+}
 
-    #award-icon {
-        height: 40px;
-    }
+#award-icon {
+    height: 40px;
 }

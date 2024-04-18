@@ -1,0 +1,50 @@
+@use '../abstracts/variables' as vars;
+
+@font-face {
+    font-family: "Russo One";
+    src: url('../fonts/RussoOne-Regular.woff');
+    src: url('../fonts/RussoOne-Regular.woff') format('woff'),
+         url('../fonts/RussoOne-Regular.woff2') format('woff2');
+}
+
+@mixin main-typo {
+    font-family: "Russo One", sans-serif;
+    color: vars.$primary;
+}
+
+body {
+    @include main-typo();
+    text-align: center;
+}
+
+button,
+input {
+    @include main-typo();
+}
+
+h1 {
+    font-size: 3rem;
+
+    @media screen and (min-width: 514px) {
+        font-size: 4rem;
+    }
+}
+
+.points {
+    font-size: 2.2rem;
+    color: vars.$quaternery;
+}
+
+#number {
+    line-height: 7.5rem;
+    font-size: 4rem;
+
+    @media screen and (min-width: 514px) {
+        line-height: 8.3rem;
+        font-size: 6rem;
+    }
+}
+
+#message {
+    font-size: 1.4rem;
+}

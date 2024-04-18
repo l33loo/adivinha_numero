@@ -1,16 +1,11 @@
-@use '../base/colors' as *;
+@use '../abstracts/variables' as vars;
 
 #number {
-    background-color: $yellow;
-    padding: 30px;
-    line-height: 2rem;
+    background-color: vars.$yellow;
+    padding: 0 2.6rem;
     border-radius: 20px;
-    font-size: 4rem;
-    color: white;
 
     @media screen and (min-width: 514px) {
-        padding: 40px;
-        line-height: 3rem;
-        font-size: 5rem;
+        padding: 0 2.4rem;
     }
 }

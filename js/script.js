@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const playButton = document.getElementById('play');
     const resetButton = document.getElementById('reset');
     const numberDisplay = document.getElementById('number');
-    const inputWrapper = document.getElementById('input-wrap');
     const messageElement = document.getElementById('message');
     resetMessage();
 

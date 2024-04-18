@@ -1,11 +1,11 @@
-@use '../base/colors' as *;
+@use '../abstracts/variables' as vars;
 
 button {
     cursor: pointer;
 }
 
 .btn {
-    color: $primary;
+    color: vars.$primary;
     border: none;
     margin: 0;
     padding: 24px 40px;
@@ -23,20 +23,19 @@ button {
 
     &--primary {
         @extend .btn;
-        background-color: $playBtn;
+        background-color: vars.$playBtn;
 
         &:hover {
-            background-color: darken($playBtn, 10%);
+            background-color: darken(vars.$playBtn, 10%);
         }
     }
 
     &--secondary {
         @extend .btn;
-        background-color: $tercery;
+        background-color: vars.$tercery;
 
         &:hover {
-            background-color: darken($tercery, 10%);
+            background-color: darken(vars.$tercery, 10%);
         }
     }
 }
-// TODO: add hover and focus styles.

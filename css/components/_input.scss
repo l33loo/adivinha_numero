@@ -1,17 +1,12 @@
-@use '../base' as *;
+@use '../abstracts/variables' as vars;
 
-#input-wrap {
-    padding-top: 3.2rem;
-
-    input {
-        width: 100%;
-        max-width: 540px;
-        background-color: $secondary;
-        border: 3px solid $tercery;
-        border-radius: 20px;
-        padding: 20px;
-        color: $primary;
-        font-family: "Russo One", sans-serif;
-        font-size: 1.5rem;
-    }
+input {
+    width: 100%;
+    max-width: 540px;
+    background-color: vars.$secondary;
+    border: 3px solid vars.$tercery;
+    border-radius: 20px;
+    padding: 20px;
+    color: vars.$primary;
+    font-size: 1.5rem;
 }
