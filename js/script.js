@@ -109,13 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-
-// TODO: Fix like prof does, using trunc
+// Gera um número inteiro entre 1 e 20, inclusivo
 const generateNumberToGuess = () => {
-    let numberToGuess = Math.round(Math.random() * 20);
-    if (numberToGuess === 0) {
-        numberToGuess++;
-    }
-
-    return numberToGuess;
+    return Math.ceil(Math.random() * 20);
 };
