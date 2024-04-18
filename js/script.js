@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Invalid guess
         if (!Number.isInteger(guessToNumber) || guessToNumber < 1 || guessToNumber > 20) {
-            displayMessage("Palpite inválido! Escolha um número inteiro entre 1 e 20", 'invalid');
+            displayMessage("Palpite inválido! Escolha um número inteiro entre 1 e 20");
             input.focus();
             return;
         }
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
         pointsDisplay.innerHTML = points;
         input.focus();
         const message = (guessToNumber < numberToGuess) ? 'Muito baixo!': 'Muito alto!';
-        displayMessage(message, 'wrong');
+        displayMessage(message);
 
         // Game over
         if (points === 0) {
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function endGame(isWin) {
         const className = isWin ? 'won' : 'lost';
         const message = isWin ? 'GANHASTE!' : 'GAME OVER :(';
-        displayMessage(message, className);
+        displayMessage(message);
      
         console.log(message);
         playButton.disabled = true;
@@ -97,12 +97,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function resetMessage() {
-        displayMessage('Adivinha um número entre 1 e 20', 'instructions');
+        displayMessage('Adivinha um número entre 1 e 20');
     }
 
-    function displayMessage(message, className) {
+    function displayMessage(message) {
         messageElement.innerHTML = message;
-        messageElement.className = className;
     }
 });
 
