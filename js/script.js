@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
         points--;
         pointsDisplay.innerHTML = points;
         input.focus();
-        const message = (guessToNumber < numberToGuess) ? 'Muito alto!': 'Muito baixo!';
+        const message = (guessToNumber < numberToGuess) ? 'Muito baixo!': 'Muito alto!';
         displayMessage(message, 'wrong');
 
         // Game over
