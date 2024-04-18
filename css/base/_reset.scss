@@ -8,6 +8,8 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
+ @use '../abstracts/variables' as vars;
+
  html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
@@ -41,7 +43,7 @@
     // font-size: 4rem;
     margin: 2rem 0;
 
-    @media screen and (min-width: 514px) {
+    @media screen and (min-width: vars.$breakpoint) {
       margin: 3rem 0;
     }
   }
