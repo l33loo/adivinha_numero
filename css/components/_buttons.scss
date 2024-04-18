@@ -21,7 +21,8 @@ button {
         outline: none;
     }
 
-    &_primary {
+    &--primary {
+        @extend .btn;
         background-color: $playBtn;
 
         &:hover {
@@ -29,7 +30,8 @@ button {
         }
     }
 
-    &_secondary {
+    &--secondary {
+        @extend .btn;
         background-color: $tercery;
 
         &:hover {
