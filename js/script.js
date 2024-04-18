@@ -79,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
         playButton.disabled = true;
         input.disabled = true;
         numberDisplay.innerHTML = numberToGuess;
-        resetButton.focus();
     }
 
     function resetGame(e) {
