@@ -21,11 +21,16 @@ button {
         outline: none;
     }
 
+    &:disabled {
+        filter: brightness(65%);
+        cursor: not-allowed;
+    }
+
     &--primary {
         @extend .btn;
         background-color: vars.$playBtn;
 
-        &:hover {
+        &:hover:not(:disabled) {
             background-color: darken(vars.$playBtn, 10%);
         }
     }
@@ -34,7 +39,7 @@ button {
         @extend .btn;
         background-color: vars.$tercery;
 
-        &:hover {
+        &:hover:not(:disabled) {
             background-color: darken(vars.$tercery, 10%);
         }
     }
