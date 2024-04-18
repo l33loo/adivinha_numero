@@ -59,20 +59,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         
         // Valid but wrong guess
-        if (guessToNumber >= 1 && guessToNumber <= 20) {
-            points--;
-            pointsDisplay.innerHTML = points;
-            input.focus();
-            const message = (guessToNumber < numberToGuess) ? 'number is higher': 'number is lower';
-            displayMessage(message, 'wrong');
+        points--;
+        pointsDisplay.innerHTML = points;
+        input.focus();
+        const message = (guessToNumber < numberToGuess) ? 'number is higher': 'number is lower';
+        displayMessage(message, 'wrong');
 
-            // Game over
-            if (points === 0) {
-                endGame(false);
-            }
-
-            console.log(message);
-            return;
+        // Game over
+        if (points === 0) {
+            endGame(false);
         }
     }
 
