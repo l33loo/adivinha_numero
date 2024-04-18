@@ -6,16 +6,16 @@
     <title>Adivinha o número!</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="flex flex__center">
+<body>
     <!-- <img src="../UI-Design-AdivinhaNum.png" alt=""> -->
     <div class="container">
-        <div class="flex flex__center">
+        <div>
             <h1>Adivinha o número</h1>
         </div>
-        <div class="flex flex__center">
-            <div id="number" class="flex flex__center">?</div>
+        <div>
+            <div id="number">?</div>
         </div>
-        <div id="input-wrap" class="flex flex__center">
+        <div id="input-wrap">
             <input
                 type="text"
                 name="guess"
@@ -26,12 +26,12 @@
             <button id="play" class="btn--primary">Adivinhar</button>
             <button id="reset" class="btn--secondary">Novo Jogo</button>
         </div>
-        <div class="flex flex__center">
+        <div>
             <div id="message"></div>
         </div>
         <div class="points-wrap flex flex__center">
-            <img id="award" src="img/award_cup_prize_icon.png" alt="">
-            <div class="points"><!-- TODO: add cup icon -->Pontos : <span id="points"></span></div>
+            <img id="award-icon" src="img/award_cup_prize_icon.png" alt="">
+            <div class="points">Pontos : <span id="points"></span></div>
         </div>
     </div>
 

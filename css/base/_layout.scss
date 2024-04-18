@@ -1,4 +1,7 @@
+@use 'mixins' as mixins;
+
 body {
+    @include mixins.flex-center;
     width: 100vw;
     min-height: 100vh;
     overflow-y: scroll;
@@ -7,15 +10,9 @@ body {
 
 .container {
     padding: 20px;
-}
 
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-
-    &__center {
-        justify-content: center;
-        align-items: center;
+    & > div {
+        @include mixins.flex-center;
     }
 }
 
