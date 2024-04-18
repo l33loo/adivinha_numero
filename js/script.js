@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         // Win
         // Usamos o '==' porque o palpite é uma string
+        // TODO: fix use of floats
         if (guess == numberToGuess) {
             endGame(true);
             return;
@@ -104,12 +105,15 @@ document.addEventListener("DOMContentLoaded", () => {
         displayMessage('Adivinha um número entre 1 e 20', 'instructions');
     }
 
+    // TODO: fix all messages
     function displayMessage(message, className) {
         messageElement.innerHTML = message;
         messageElement.className = className;
     }
 });
 
+
+// TODO: Fix like prof does, using trunc
 const generateNumberToGuess = () => {
     let numberToGuess = Math.round(Math.random() * 20);
     if (numberToGuess === 0) {
